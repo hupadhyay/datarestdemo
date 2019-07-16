@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+/**
+ * This is a demo Spring Data Rest Project 
+ */
 @SpringBootApplication
 public class DatarestdemoApplication {
 
