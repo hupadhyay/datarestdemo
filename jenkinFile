@@ -1,0 +1,30 @@
+pipeline{
+	agent any
+	
+	stages{
+		stage('Compile Stage'){
+			steps{
+				withMaven(){
+					sh 'mvn clean compile'
+				}
+			}
+		}
+	
+		stage('Package Stage'){
+			steps{
+				withMaven(){
+					sh 'mvn clean package'
+				}
+			}
+		}
+		
+		stage('Validate Stage'){
+			steps{
+				withMaven(){
+					sh 'mvn pmd:pmd'
+				}
+			}
+		}
+	}
+
+}
